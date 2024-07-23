@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #0056b3;
+    --hover-color: #003580;
+    --disabled-color: #cccccc;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --input-padding: 15px;
+    --button-padding: 10px 20px;
+    --border-radius: 5px;
+    --font-large: 16px;
+    --timer-color: red;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    color: #0a0a23;
+}
+
+img, video, audio, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+input[type="text"], input[type="button"], textarea, button {
+    width: calc(100% - 40px);
+    padding: var(--input-padding);
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+}
+
+button {
+    padding: var(--button-padding);
+    font-size: var(--font-large);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:disabled {
+    background-color: var(--disabled-color);
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+textarea {
+    min-height: 150px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    input[type="text"], input[type="button"], button {
+        width: calc(100% - 20px);
+    }
+}
+
+#timer {
+    color: var(--timer-color);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#quiz, #result {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.navigation button {
+    margin-right: 10px;
+}
+.matching-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column, .right-column {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.matching-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: move;
+}
